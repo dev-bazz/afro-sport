@@ -1,0 +1,4 @@
+@function pix-rem($pixels, $suffix: rem) {
+	$calc: calc(#{$pixels}/ 16px);
+	@return #{$calc}#{$suffix};
+}
