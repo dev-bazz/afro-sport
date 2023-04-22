@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+	const props = defineProps(["isLogged"]);
+</script>
 
 <template>
 	<nav class="nav">
@@ -7,8 +9,14 @@
 				src="./assets/afrosport-logo.png"
 				alt="logo" />
 			<ul class="nav__list">
-				<li class="btn__white">Login</li>
-				<li class="btn__black">Create Account</li>
+				<template v-if="isLogged === true">
+					<li>Notification</li>
+					<li>Profile</li>
+				</template>
+				<template v-else>
+					<li class="btn__white">Login</li>
+					<li class="btn__black">Create Account</li>
+				</template>
 			</ul>
 		</div>
 	</nav>
