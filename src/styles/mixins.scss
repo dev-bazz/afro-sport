@@ -1,0 +1,46 @@
+@use "./colors.scss" as *;
+@use "./functions.scss" as *;
+
+//  Utilities Mixins
+@mixin flexSpaceBetween {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+@mixin flex {
+	display: flex;
+}
+
+@mixin fontFamily {
+	font-family: "Lato", sans-serif;
+}
+@mixin buttonBase {
+	padding: px-to-rem(12px) px-to-rem(16px);
+	border-radius: px-to-rem(8px);
+	font-size: px-to-rem(14px);
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	transition: all 0.2s ease-in-out;
+	@content;
+	&:active {
+		scale: 0.9;
+	}
+}
+//  Component Mixins
+
+@mixin button($stroke: false) {
+	@if $stroke {
+		@include buttonBase {
+			border: 1px solid #101010;
+		}
+	} @else {
+		@include buttonBase {
+			background-color: map-get($colors, "black");
+			color: map-get($colors, $key: "white");
+		}
+	}
+}

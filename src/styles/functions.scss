@@ -1,4 +1,5 @@
-@function pix-rem($pixels, $suffix: rem) {
-	$calc: calc(#{$pixels}/ 16px);
-	@return #{$calc}#{$suffix};
+$base-font-size: 16px;
+
+@function px-to-rem($px) {
+	@return calc($px / $base-font-size) * 1rem;
 }
