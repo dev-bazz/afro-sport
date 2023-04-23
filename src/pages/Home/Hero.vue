@@ -70,11 +70,10 @@
 		font-family: inherit;
 		font-size: inherit;
 		line-height: inherit;
-		padding: 0;
+
 		margin: 0 0;
 		margin-top: px-to-rem(32px);
 		color: inherit;
-		padding: 0 px-to-rem(16px);
 
 		.content {
 			@include fontFamily;
@@ -90,6 +89,9 @@
 					}
 					margin-left: 4vw;
 					margin-left: 4dvw;
+					@include custom-media-query("mobile", 929px) {
+						margin-left: none !important;
+					}
 
 					.search {
 						margin-top: 4vh;
@@ -150,14 +152,18 @@
 			min-height: px-to-rem(324px);
 			display: grid;
 			padding-block: px-to-rem(32px);
-
+			padding-inline: px-to-rem(16px);
 			grid-template-columns: 1.5fr 1fr;
-			@include custom-media-query("mobile", 420px) {
+
+			@include custom-media-query("mobile", 740px) {
 				grid-template-columns: 1fr;
 			}
 		}
 		.player {
 			position: relative;
+			@include custom-media-query("mobile", 740px) {
+				display: none;
+			}
 			.football_player {
 				position: absolute;
 				top: px-to-rem(-8px);
@@ -179,8 +185,10 @@
 			}
 			.ball {
 				position: absolute;
-				left: 46%;
-				bottom: px-to-rem(-254px);
+				// left: 46%;
+				// bottom: px-to-rem(-254px);
+				right: 189px;
+				top: 12rem;
 				@include custom-media-query("mobile", 929px) {
 					left: 58%;
 				}
