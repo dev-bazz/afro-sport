@@ -33,7 +33,6 @@
 		padding: 0;
 		margin: 0 0;
 		margin-top: px-to-rem(32px);
-
 		color: inherit;
 
 		&__container {
@@ -66,11 +65,21 @@
 					cubic-bezier(0.65, 0.05, 0.36, 1),
 					none
 				);
+				@include custom-media-query("mobile", 929px) {
+					left: -16%;
+				}
+				@include custom-media-query("mobile", 800px) {
+					display: none;
+				}
 			}
 			.ball {
 				position: absolute;
 				left: 46%;
 				bottom: px-to-rem(-254px);
+				@include custom-media-query("mobile", 929px) {
+					left: 58%;
+				}
+
 				@include animation(
 					ball,
 					1.5s,
