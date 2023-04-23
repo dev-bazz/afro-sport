@@ -4,8 +4,17 @@
 </script>
 
 <template>
-	<NavBarVue />
-	<Hero />
+	<div className="layout">
+		<NavBarVue />
+		<Hero />
+	</div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+	@use "../../styles/utilities.scss" as *;
+
+	.layout {
+		display: grid;
+		grid-template-rows: auto 1fr auto;
+	}
+</style>

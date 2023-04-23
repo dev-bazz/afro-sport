@@ -47,7 +47,7 @@
 					</form>
 				</div>
 			</div>
-			<div className="content ">
+			<div className="content pp ">
 				<div className="player">
 					<img
 						src="./assets/player 1.png"
@@ -70,19 +70,23 @@
 		font-family: inherit;
 		font-size: inherit;
 		line-height: inherit;
-
 		margin: 0 0;
 		margin-top: px-to-rem(32px);
 		color: inherit;
+		padding-inline: px-to-rem(16px);
 
 		.content {
 			@include fontFamily;
+			position: relative;
 			color: map-get($colors, $key: "white");
 
 			&:is(.msg) {
 				display: grid;
 				align-items: center;
 
+				.pp {
+					width: 50%;
+				}
 				.message {
 					:is(h1, p) {
 						margin: 0;
@@ -148,15 +152,15 @@
 			border-radius: px-to-rem(7.41333px);
 			max-width: calc(map-get($containers, "max-width") - 16px);
 			margin-inline: auto;
-			width: 100%;
 			min-height: px-to-rem(324px);
 			display: grid;
-			padding-block: px-to-rem(32px);
+
 			padding-inline: px-to-rem(16px);
 			grid-template-columns: 1.5fr 1fr;
 
 			@include custom-media-query("mobile", 740px) {
 				grid-template-columns: 1fr;
+				padding-block: px-to-rem(32px);
 			}
 		}
 		.player {
