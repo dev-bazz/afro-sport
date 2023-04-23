@@ -36,6 +36,7 @@
 	@if $stroke {
 		@include buttonBase {
 			border: 1px solid #101010;
+			background-color: map-get($colors, $key: "white");
 		}
 	} @else {
 		@include buttonBase {

@@ -56,6 +56,7 @@
 <style lang="scss" scoped>
 	@use "../../styles/utilities.scss" as *;
 	.nav {
+		border-bottom: 1px solid #cccccc;
 		&__wrapper {
 			@include flexSpaceBetween;
 			max-width: calc(map-get($containers, "max-width") - 16px);
