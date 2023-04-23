@@ -1,7 +1,7 @@
 import NavBar from "./NavBar.vue";
 
 export default {
-	title: "NavBar",
+	title: "Components/NavBar",
 	component: NavBar,
 	tags: ["autodocs", "components"],
 	args: {
