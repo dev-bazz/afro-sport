@@ -1,18 +1,22 @@
-<script setup>
-	const props = defineProps(["isLogged", "notifications"]);
+<script setup lang="ts">
+	interface Props {
+		isLogged: boolean;
+		notifications: number;
+	}
+	const props = defineProps<Props>();
 </script>
 
 <template>
-	<nav class="nav">
-		<div class="nav__wrapper">
+	<nav className="nav">
+		<div className="nav__wrapper">
 			<img
 				src="./assets/afrosport-logo.png"
 				alt="logo" />
-			<ul class="nav__list">
+			<ul className="nav__list">
 				<template v-if="isLogged === true && isLogged">
-					<li class="logged">
+					<li className="logged">
 						<span
-							class="notification"
+							className="notification"
 							v-if="notifications > 0"
 							>{{ notifications }}</span
 						>
@@ -27,7 +31,7 @@
 								fill="black" />
 						</svg>
 					</li>
-					<li class="logged">
+					<li className="logged">
 						<svg
 							width="32"
 							height="32"
@@ -41,8 +45,8 @@
 					</li>
 				</template>
 				<template v-else>
-					<li class="btn__white">Login</li>
-					<li class="btn__black">Create Account</li>
+					<li className="btn__white">Login</li>
+					<li className="btn__black">Create Account</li>
 				</template>
 			</ul>
 		</div>
