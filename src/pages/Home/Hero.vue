@@ -1,7 +1,10 @@
 <script setup lang="ts">
+	import { ref } from "vue";
+
+	const element = ref("");
 	const check = (e: any) => {
 		e.preventDefault();
-		console.log("clicked");
+		console.log("clicked", element.value);
 	};
 </script>
 
@@ -40,6 +43,7 @@
 							</svg>
 
 							<input
+								v-model="element"
 								type="text"
 								placeholder="search for players positions" />
 							<button @click="check">Search</button>
