@@ -78,7 +78,6 @@
 		margin-top: px-to-rem(32px);
 		color: inherit;
 		padding-inline: px-to-rem(16px);
-
 		.content {
 			@include fontFamily;
 			position: relative;
