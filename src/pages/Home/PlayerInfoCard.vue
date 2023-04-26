@@ -14,7 +14,7 @@
     <div class="card">
         <div class="card__img">
             <img :src="props.player.dp ?? '/src/pages/Home/assets/player-dp.png'" alt="Player DP">
-            <p>{{props.player.price ? `From ${props.player.price}` : "Free"}}</p>
+            <p>{{props.player.price ? `From $${props.player.price}` : "Free"}}</p>
         </div>
         <div class="card__info">
             <h2>{{props.player.name ?? 'Player Name'}}</h2>
