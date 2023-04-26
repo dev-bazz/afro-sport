@@ -8,8 +8,8 @@ export default {
         player: {
             dp: '/src/pages/Home/assets/player-dp.png',
             price: '500',
-            name: 'Mezut Ozil',
-            category: 'Centre Forward',
+            name: 'Mesut Özil',
+            category: 'Attacking Midfielder',
             club: 'Arsenal'
         }
     },
@@ -20,8 +20,8 @@ export const Default = {
         player: {
             dp: '/src/pages/Home/assets/player-dp.png',
             price: '500',
-            name: 'Mezut Ozil',
-            category: 'Centre Forward',
+            name: 'Mesut Özil',
+            category: 'Attacking Midfielder',
             club: 'Arsenal'
         }
     },
