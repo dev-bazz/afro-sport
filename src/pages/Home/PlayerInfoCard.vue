@@ -1,21 +1,30 @@
 <script setup>
+    const props = defineProps({
+        player: {
+            type: Object,
+            required: true,
+            default(rawProps) {
+                return { message: 'hello' }
+            }
+        }
+    })
 </script>
 
 <template>
-    <div class="player-info-card">
-        <div class="img">
-            <img src="./assets/player-dp.png" alt="Player DP">
-            <p>From $29</p>
+    <div class="card">
+        <div class="card__img">
+            <img :src="props.player.dp ?? '/src/pages/Home/assets/player-dp.png'" alt="Player DP">
+            <p>{{props.player.price ? `From ${props.player.price}` : "Free"}}</p>
         </div>
-        <div class="info">
-            <h2>Player Name</h2>
-            <p>Goalkeeper • Club Name</p>
+        <div class="card__info">
+            <h2>{{props.player.name ?? 'Player Name'}}</h2>
+            <p>{{props.player.category ?? 'Goalkeeper'}} • {{props.player.club ?? "Free agent"}}</p>
         </div>
     </div>
 </template>
 
 <style scoped>
-    .player-info-card {
+    .card {
         width: 100%;
         border: 1px solid #dcdcdc;
         border-radius: 8px;
@@ -23,12 +32,17 @@
         font-family: "Lato", sans-serif;
     }
 
-    .img {
+    .card__img {
         width: 100%;
         position: relative;
     }
 
-    .img p {
+    .card__img img {
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .card__img p {
         position: absolute;
         bottom: 10px;
         right: 10px;
@@ -38,15 +52,10 @@
         font-size: 11px;
     }
 
-    img {
-        width: 100%;
-        border-radius: 8px;
-    }
-
-    .info {
+    .card__info {
         padding-top: 25px;
     }
-    .info h2{
+    .card__info h2{
         font-size: 20px;
         font-weight: 400;
         text-transform: capitalize;
@@ -54,7 +63,7 @@
         margin-bottom: 10px;
     }
 
-    .info p {
+    .card__info p {
         font-size: 18px;
         color: #5A6979;
         margin: 0;
