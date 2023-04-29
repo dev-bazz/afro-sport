@@ -1,28 +1,29 @@
-<script setup>
-	const props = defineProps({
+<script setup lang="ts">
+	interface Props {
 		player: {
-			type: Object,
-			required: true,
-			default(rawProps) {
-				return { message: "hello" };
-			},
-		},
-	});
+			dp?: string;
+			price?: number;
+			name?: string;
+			category?: string;
+			club?: string;
+		};
+	}
+	defineProps<Props>();
 </script>
 
 <template>
-	<div class="card">
-		<div class="card__img">
+	<div className="card">
+		<div className="card__img">
 			<img
-				:src="props.player.dp ?? '/src/pages/Home/assets/player-dp.png'"
+				:src="player.dp ?? '/src/pages/Home/assets/player-dp.png'"
 				alt="Player DP" />
-			<p>{{ props.player.price ? `From $${props.player.price}` : "Free" }}</p>
+			<p>{{ player.price ? `From $${player.price}` : "Free" }}</p>
 		</div>
-		<div class="card__info">
-			<h2>{{ props.player.name ?? "Player Name" }}</h2>
+		<div className="card__info">
+			<h2>{{ player.name ?? "Player Name" }}</h2>
 			<p>
-				{{ props.player.category ?? "Goalkeeper" }} •
-				{{ props.player.club ?? "Free agent" }}
+				{{ player.category ?? "Goalkeeper" }} •
+				{{ player.club ?? "Free agent" }}
 			</p>
 		</div>
 	</div>

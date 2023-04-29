@@ -2,6 +2,7 @@
 	import NavBarVue from "../../components/NavBar/NavBar.vue";
 	import Hero from "./Hero.vue";
 	import Tab from "./Tab.vue";
+	import Player from "./PlayerInfoCard.vue";
 	import { reactive } from "vue";
 
 	import { register } from "swiper/element/bundle";
@@ -38,14 +39,15 @@
 				:autoplay="{
 					delay: 5000,
 				}">
-				<swiper-slide> <div className="card">Card</div></swiper-slide>
-				<swiper-slide> <div className="card">Card</div></swiper-slide>
-				<swiper-slide> <div className="card">Card</div></swiper-slide>
-				<swiper-slide> <div className="card">Card</div></swiper-slide>
-				<swiper-slide> <div className="card">Card</div></swiper-slide>
-				<swiper-slide> <div className="card">Card</div></swiper-slide>
-				<swiper-slide> <div className="card">Card</div></swiper-slide>
-				<swiper-slide> <div className="card">Card</div></swiper-slide>
+				<swiper-slide> <Player /> </swiper-slide>
+				<swiper-slide> <Player /> </swiper-slide>
+				<swiper-slide> <Player /> </swiper-slide>
+				<swiper-slide> <Player /> </swiper-slide>
+				<swiper-slide> <Player /> </swiper-slide>
+				<swiper-slide> <Player /> </swiper-slide>
+				<swiper-slide> <Player /> </swiper-slide>
+				<swiper-slide> <Player /> </swiper-slide>
+				<swiper-slide> <Player /> </swiper-slide>
 			</swiper-container>
 		</div>
 	</div>
