@@ -36,10 +36,15 @@
 		border-radius: 8px;
 		padding: 8px;
 		font-family: "Lato", sans-serif;
+		background-color: map-get($colors, $key: "white");
+		cursor: pointer;
+		transition: all 0.3s ease-in-out;
+		&:hover {
+			background-color: #e9eff2;
+		}
 	}
 
 	.card__img {
-		width: 100%;
 		position: relative;
 	}
 
