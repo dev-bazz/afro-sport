@@ -64,7 +64,7 @@
 			margin-inline: auto;
 			padding-inline: px-to-rem(16px);
 		}
-// Nav Bar List
+		// Nav Bar List
 		&__list {
 			@include flex;
 			list-style: none;
