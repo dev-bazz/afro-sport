@@ -28,26 +28,13 @@
 				:slides-per-view="4"
 				space-between="2"
 				:centered-slides="true"
-				:breakpoints="{
-					768: {
-						slidesPerView: 3,
-					},
-				}"
-				class="swiper-container"
+				className="swiper-container"
 				loop="true"
 				speed="500"
 				:autoplay="{
 					delay: 5000,
 				}">
-				<swiper-slide> <Player /> </swiper-slide>
-				<swiper-slide> <Player /> </swiper-slide>
-				<swiper-slide> <Player /> </swiper-slide>
-				<swiper-slide> <Player /> </swiper-slide>
-				<swiper-slide> <Player /> </swiper-slide>
-				<swiper-slide> <Player /> </swiper-slide>
-				<swiper-slide> <Player /> </swiper-slide>
-				<swiper-slide> <Player /> </swiper-slide>
-				<swiper-slide> <Player /> </swiper-slide>
+				<swiper-slide> <Player price="$100" /> </swiper-slide>
 			</swiper-container>
 		</div>
 	</div>

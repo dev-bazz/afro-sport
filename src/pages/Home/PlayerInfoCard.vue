@@ -1,29 +1,27 @@
 <script setup lang="ts">
 	interface Props {
-		player: {
-			dp?: string;
-			price?: number;
-			name?: string;
-			category?: string;
-			club?: string;
-		};
+		dp?: string;
+		price?: number;
+		name?: string;
+		category?: string;
+		club?: string;
 	}
 	defineProps<Props>();
 </script>
 
 <template>
-	<div className="card">
+	<div className="card-player">
 		<div className="card__img">
 			<img
-				:src="player.dp ?? '/src/pages/Home/assets/player-dp.png'"
+				:src="dp ?? '/src/pages/Home/assets/player-dp.png'"
 				alt="Player DP" />
-			<p>{{ player.price ? `From $${player.price}` : "Free" }}</p>
+			<p>{{ price ? `From $${price}` : "Free" }}</p>
 		</div>
 		<div className="card__info">
-			<h2>{{ player.name ?? "Player Name" }}</h2>
+			<h2>{{ name ?? "Player Name" }}</h2>
 			<p>
-				{{ player.category ?? "Goalkeeper" }} •
-				{{ player.club ?? "Free agent" }}
+				{{ category ?? "Goalkeeper" }} •
+				{{ club ?? "Free agent" }}
 			</p>
 		</div>
 	</div>
@@ -31,11 +29,11 @@
 
 <style lang="scss" scoped>
 	@use "../../styles/utilities.scss" as *;
-	.card {
+	.card-player {
 		max-width: px-to-rem(327px);
 		border: 1px solid #dcdcdc;
-		border-radius: 8px;
-		padding: 8px;
+		border-radius: px-to-rem(8px);
+		padding: px-to-rem(8px);
 		font-family: "Lato", sans-serif;
 		background-color: map-get($colors, $key: "white");
 		cursor: pointer;
@@ -65,14 +63,14 @@
 	}
 
 	.card__info {
-		padding-top: 25px;
+		padding-top: px-to-rem(25px);
 	}
 	.card__info h2 {
-		font-size: 20px;
+		font-size: px-to-rem(20px);
 		font-weight: 400;
 		text-transform: capitalize;
 		margin: 0;
-		margin-bottom: 10px;
+		margin-bottom: px-to-rem(10px);
 	}
 
 	.card__info p {
