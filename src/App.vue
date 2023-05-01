@@ -1,9 +1,23 @@
 <script setup>
-	import Home from "./pages/Home/Home.vue";
+	import Navbar from "./components/NavBar/NavBar.vue";
+	import Footer from "./components/Footer/Footer.vue";
 </script>
 
 <template>
-	<Home />
+	<div class="view">
+		<Navbar />
+		<div class="content">
+			<RouterView />
+		</div>
+		<Footer />
+	</div>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+	.view {
+		display: grid;
+		grid-template-rows: auto 1fr auto;
+		min-height: 100vh;
+		min-height: 100dvh;
+	}
+</style>

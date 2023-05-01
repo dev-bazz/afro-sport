@@ -31,8 +31,7 @@
 
 <template>
 	<div className="layout">
-		<NavBarVue />
-
+		<!-- fix the type issue with NavBarVue -->
 		<Hero />
 		<div className="players">
 			<Tab
@@ -50,7 +49,7 @@
 				}"
 				:breakpoints="sliderConfig.mobile">
 				<template v-for="n in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]">
-					<swiper-slide> <Player price="100" /> </swiper-slide>
+					<swiper-slide> <Player :price="100" /> </swiper-slide>
 				</template>
 			</swiper-container>
 		</div>
@@ -60,17 +59,17 @@
 				link="See all" />
 
 			<swiper-container
-				:centered-slides="true"
 				className="swiper-container"
+				:slidesPerView="4"
 				:loop="true"
-				:space-between="16"
 				speed="500"
+				:space-between="8"
 				:autoplay="{
 					delay: 5000,
 				}"
 				:breakpoints="sliderConfig.mobile">
 				<template v-for="n in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]">
-					<swiper-slide> <Player price="100" /> </swiper-slide>
+					<swiper-slide> <Player :price="100" /> </swiper-slide>
 				</template>
 			</swiper-container>
 		</div>
@@ -99,7 +98,7 @@
 			<div className="grid">
 				<template
 					v-for="n in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]">
-					<Player price="100" />
+					<Player :price="100" />
 				</template>
 			</div>
 		</div>
@@ -131,6 +130,7 @@
 			max-width: map-get($containers, $key: "max-width");
 			margin: auto;
 			margin-top: px-to-rem(24px);
+			padding-bottom: px-to-rem(32px);
 		}
 	}
 
