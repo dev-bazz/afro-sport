@@ -3,7 +3,7 @@
 		isLogged: boolean;
 		notifications: number;
 	}
-	const props = defineProps<Props>();
+	defineProps<Props>();
 </script>
 
 <template>
@@ -56,14 +56,15 @@
 <style lang="scss" scoped>
 	@use "../../styles/utilities.scss" as *;
 	.nav {
+		padding-inline: px-to-rem(16px);
 		border-bottom: 1px solid #cccccc;
 		&__wrapper {
 			@include flexSpaceBetween;
 			max-width: calc(map-get($containers, "max-width") - 16px);
 			margin-inline: auto;
-			padding-inline: pix-rems(16);
+			padding-inline: px-to-rem(16px);
 		}
-
+		// Nav Bar List
 		&__list {
 			@include flex;
 			list-style: none;

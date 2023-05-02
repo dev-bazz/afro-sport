@@ -12,7 +12,9 @@
   },
   "dependencies": {
     "sass": "^1.62.0",
+    "swiper": "^9.2.4",
     "vue": "^3.2.47",
+    "vue-router": "4",
     "xstate": "^4.37.1"
   },
   "devDependencies": {

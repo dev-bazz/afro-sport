@@ -11,3 +11,13 @@ body {
 	font-family: "Lato", sans-serif;
 	background-color: map-get($colors, $key: "white");
 }
+
+::-moz-selection {
+	background-color: map-get($colors, $key: "black");
+	color: map-get($colors, $key: "white");
+}
+
+::selection {
+	background-color: map-get($colors, $key: "black");
+	color: map-get($colors, $key: "white");
+}
