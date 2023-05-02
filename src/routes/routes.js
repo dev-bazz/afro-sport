@@ -15,9 +15,11 @@ const routes = [
 ];
 
 // Router
-const history = createWebHistory(),
+const history = createWebHistory("/afro-sport/"),
 	router = createRouter({
 		history,
+		base: "/afro-sport/", // set your base path here
+		mode: "history",
 		routes,
 	});
 
