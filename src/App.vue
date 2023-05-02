@@ -5,9 +5,7 @@
 </script>
 
 <template>
-	<!-- <RouterView /> -->
-
-	<HomeVue />
+	<RouterView />
 </template>
 
 <style lang="scss">
