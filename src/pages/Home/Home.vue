@@ -2,6 +2,7 @@
 	import NavBarVue from "../../components/NavBar/NavBar.vue";
 	import Hero from "./Hero.vue";
 	import Tab from "./Tab.vue";
+	import Footer from "../../components/Footer/Footer.vue";
 	import Player from "./PlayerInfoCard.vue";
 	import { reactive } from "vue";
 	import { register } from "swiper/element/bundle";
@@ -30,6 +31,7 @@
 </script>
 
 <template>
+	<NavBarVue />
 	<div className="layout">
 		<!-- fix the type issue with NavBarVue -->
 		<Hero />
@@ -40,7 +42,6 @@
 
 			<swiper-container
 				className="swiper-container"
-				:slidesPerView="4"
 				:loop="true"
 				speed="500"
 				:space-between="8"
@@ -60,7 +61,6 @@
 
 			<swiper-container
 				className="swiper-container"
-				:slidesPerView="4"
 				:loop="true"
 				speed="500"
 				:space-between="8"
@@ -103,6 +103,7 @@
 			</div>
 		</div>
 	</div>
+	<Footer />
 </template>
 
 <style lang="scss" scoped>
@@ -112,13 +113,9 @@
 		margin: auto;
 	}
 	.swiper-container {
-		max-width: map-get($containers, $key: "max-width");
-		margin: auto;
-		display: flex;
-		gap: px-to-rem(8px);
-		padding-inline: 16px;
+		@include containerL;
+
 		margin-top: 24px;
-		justify-content: space-between;
 	}
 	.players {
 		margin-top: px-to-rem(40px);
@@ -126,21 +123,19 @@
 			display: grid;
 			grid-template-columns: repeat(4, auto);
 			gap: px-to-rem(16px);
-			padding-inline: 16px;
-			max-width: map-get($containers, $key: "max-width");
-			margin: auto;
+			@include containerL;
 			margin-top: px-to-rem(24px);
 			padding-bottom: px-to-rem(32px);
 		}
 	}
 
 	.flitters {
-		max-width: map-get($containers, $key: "max-width");
-		margin: auto;
+		@include containerL;
 		display: flex;
 		justify-content: space-between;
 		margin-top: px-to-rem(24px);
 		flex-wrap: wrap;
+		gap: px-to-rem(14px);
 
 		.filter {
 			border: 1px solid #d0d4d9;
@@ -167,5 +162,10 @@
 		color: white;
 		display: grid;
 		place-items: center;
+	}
+
+	.layout {
+		@include containerL;
+		padding: 0;
 	}
 </style>

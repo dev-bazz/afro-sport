@@ -4,17 +4,11 @@
 </script>
 
 <template>
-	<div class="view">
-		<Navbar />
-		<div class="content">
-			<RouterView />
-		</div>
-		<Footer />
-	</div>
+	<RouterView />
 </template>
 
-<style scoped lang="scss">
-	.view {
+<style lang="scss">
+	#app {
 		display: grid;
 		grid-template-rows: auto 1fr auto;
 		min-height: 100vh;

@@ -153,12 +153,9 @@
 				),
 				linear-gradient(270.44deg, #fdde49 1.19%, #58dc53 43.55%);
 			border-radius: px-to-rem(7.41333px);
-			max-width: calc(map-get($containers, "max-width") - 16px);
-			margin-inline: auto;
 			min-height: px-to-rem(324px);
 			display: grid;
-
-			padding-inline: px-to-rem(16px);
+			@include containerL;
 			grid-template-columns: 1.5fr 1fr;
 
 			@include custom-media-query("mobile", 740px) {
@@ -194,7 +191,7 @@
 				position: absolute;
 				// left: 46%;
 				// bottom: px-to-rem(-254px);
-				right: 189px;
+				right: 158px;
 				top: 12rem;
 				@include custom-media-query("mobile", 929px) {
 					left: 58%;
