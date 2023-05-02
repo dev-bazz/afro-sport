@@ -3,7 +3,7 @@
 		isLogged: boolean;
 		notifications: number;
 	}
-	const props = defineProps<Props>();
+	defineProps<Props>();
 </script>
 
 <template>
@@ -64,7 +64,7 @@
 			margin-inline: auto;
 			padding-inline: px-to-rem(16px);
 		}
-
+		// Nav Bar List
 		&__list {
 			@include flex;
 			list-style: none;

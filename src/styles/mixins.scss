@@ -1,5 +1,6 @@
 @use "./colors.scss" as *;
 @use "./functions.scss" as *;
+@use "./variables.scss" as *;
 
 //  Utilities Mixins
 @mixin flexSpaceBetween {
@@ -8,6 +9,12 @@
 	align-items: center;
 }
 
+@mixin containerL {
+	max-width: calc(map-get($containers, "max-width") - 16px);
+	padding-inline: px-to-rem(16px);
+
+	margin-inline: auto;
+}
 @mixin flex {
 	display: flex;
 }
