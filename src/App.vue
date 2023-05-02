@@ -5,6 +5,7 @@
 
 <template>
 	<RouterView />
+	<h1>Hi</h1>
 </template>
 
 <style lang="scss">
