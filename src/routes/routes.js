@@ -15,7 +15,7 @@ const routes = [
 ];
 
 // Router
-const history = createWebHistory("/afro-sport/"),
+const history = createWebHistory("./"),
 	router = createRouter({
 		history,
 		routes,

@@ -13,7 +13,7 @@
 	<div className="card-player">
 		<div className="card__img">
 			<img
-				:src="dp ?? '/src/pages/Home/assets/player-dp.png'"
+				src="./assets/player-dp.png"
 				alt="Player DP" />
 			<p>{{ price ? `From $${price}` : "Free" }}</p>
 		</div>
