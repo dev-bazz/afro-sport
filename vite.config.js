@@ -14,6 +14,12 @@ export default defineConfig({
 			},
 		}),
 	],
+	// resolve: {
+	// 	alias: {
+	// 		"@": path.resolve(__dirname, "./src"),
+	// 		"@utilities": path.resolve(__dirname, "./src/styles/utilities.scss"),
+	// 	},
+	// },
 	build: {
 		target: "es2015",
 	},

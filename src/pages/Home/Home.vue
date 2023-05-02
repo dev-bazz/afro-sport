@@ -21,10 +21,12 @@
 				slidesPerView: 3,
 			},
 			375: {
-				slidesPerView: 1.8,
+				slidesPerView: 1.4,
+				centeredSlides: true,
 			},
 			320: {
-				slidesPerView: 1.2,
+				slidesPerView: 1.1,
+				centeredSlides: true,
 			},
 		},
 	});
@@ -48,7 +50,20 @@
 				:autoplay="{
 					delay: 5000,
 				}"
-				:breakpoints="sliderConfig.mobile">
+				:breakpoints="{
+					900: {
+						slidesPerView: 4,
+					},
+					835: {
+						slidesPerView: 3,
+					},
+					375: {
+						slidesPerView: 1.2,
+					},
+					320: {
+						slidesPerView: 1.1,
+					},
+				}">
 				<template v-for="n in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]">
 					<swiper-slide> <Player :price="100" /> </swiper-slide>
 				</template>
@@ -67,7 +82,24 @@
 				:autoplay="{
 					delay: 5000,
 				}"
-				:breakpoints="sliderConfig.mobile">
+				:breakpoints="{
+					900: {
+						slidesPerView: 4,
+					},
+					835: {
+						slidesPerView: 3,
+					},
+
+					535: {
+						slidesPerView: 2,
+					},
+					375: {
+						slidesPerView: 1.2,
+					},
+					320: {
+						slidesPerView: 1.1,
+					},
+				}">
 				<template v-for="n in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]">
 					<swiper-slide> <Player :price="100" /> </swiper-slide>
 				</template>
@@ -76,7 +108,7 @@
 
 		<div className="players">
 			<Tab
-				title="Recommended"
+				title="Explore"
 				link="See all" />
 			<div className="flitters">
 				<template
@@ -115,6 +147,22 @@
 	.swiper-container {
 		@include containerL;
 
+		@include custom-media-query("desktop", 320px) {
+			max-width: calc(320px - 16px);
+		}
+		@include custom-media-query("desktop", 375px) {
+			max-width: calc(475px - 16px);
+		}
+		@include custom-media-query("desktop", 535px) {
+			max-width: calc(535px - 16px);
+		}
+		@include custom-media-query("desktop", 835px) {
+			max-width: calc(835px - 16px);
+		}
+		@include custom-media-query("desktop", 900px) {
+			@include containerL;
+		}
+
 		margin-top: 24px;
 	}
 	.players {
@@ -126,6 +174,21 @@
 			@include containerL;
 			margin-top: px-to-rem(24px);
 			padding-bottom: px-to-rem(32px);
+			@include custom-media-query("mobile", 400px) {
+				grid-template-columns: repeat(2, auto);
+			}
+			@include custom-media-query("mobile", 400px) {
+				place-items: center;
+				grid-template-columns: repeat(1, auto);
+			}
+			@include custom-media-query("desktop", 635px) {
+				place-items: center;
+				grid-template-columns: repeat(3, auto);
+			}
+			@include custom-media-query("desktop", 900px) {
+				place-items: center;
+				grid-template-columns: repeat(4, auto);
+			}
 		}
 	}
 
