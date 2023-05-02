@@ -151,7 +151,7 @@
 			max-width: calc(320px - 16px);
 		}
 		@include custom-media-query("desktop", 375px) {
-			max-width: calc(475px - 16px);
+			max-width: calc(355px - 16px);
 		}
 		@include custom-media-query("desktop", 535px) {
 			max-width: calc(535px - 16px);
@@ -180,6 +180,10 @@
 			@include custom-media-query("mobile", 400px) {
 				place-items: center;
 				grid-template-columns: repeat(1, auto);
+			}
+			@include custom-media-query("desktop", 410px) {
+				place-items: center;
+				grid-template-columns: repeat(2, auto);
 			}
 			@include custom-media-query("desktop", 635px) {
 				place-items: center;
