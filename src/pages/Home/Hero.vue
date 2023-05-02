@@ -54,11 +54,11 @@
 			<div className="content pp ">
 				<div className="player">
 					<img
-						src="./assets/player 1.png"
+						src="./assets/player1.png"
 						alt="football_player"
 						className="football_player" />
 					<img
-						src="./assets/ball 1.png"
+						src="./assets/ball1.png"
 						alt="ball"
 						className="ball" />
 				</div>
