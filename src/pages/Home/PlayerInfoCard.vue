@@ -1,27 +1,48 @@
 <script setup lang="ts">
+	import { computed } from "vue";
+
 	interface Props {
 		dp?: string;
 		price?: number;
-		name?: string;
+		fName?: string;
+		lName?: string;
 		category?: string;
 		club?: string;
+		type?: string;
+		image?: string;
+		position: Array<string>;
 	}
-	defineProps<Props>();
+	const props = defineProps<Props>();
+	const positions = computed(() => {
+		if (props.position) {
+			return props.position.length > 1 ? "Multiple" : props.position[0];
+		} else {
+			return;
+		}
+	});
 </script>
 
 <template>
 	<div className="card-player">
 		<div className="card__img">
 			<img
+				v-if="image"
+				:src="image"
+				alt="" />
+			<img
+				v-else
 				src="./assets/player-dp.png"
 				alt="Player DP" />
-			<p>{{ price ? `From $${price}` : "Free" }}</p>
+			<p>{{ price ? `${type ?? "exact $"} ${price}` : "Free" }}</p>
 		</div>
 		<div className="card__info">
-			<h2>{{ name ?? "Player Name" }}</h2>
-			<p>
-				{{ category ?? "Goalkeeper" }} •
-				{{ club ?? "Free agent" }}
+			<h2>{{ fName && lName ? `${fName} ${lName}` : "Player Name" }}</h2>
+			<p className="pc">
+				<span> {{ positions ?? "Goalkeeper" }} </span>
+				•
+				<span>
+					{{ club ?? "Free agent" }}
+				</span>
 			</p>
 		</div>
 	</div>
@@ -29,6 +50,10 @@
 
 <style lang="scss" scoped>
 	@use "../../styles/utilities.scss" as *;
+
+	.pc {
+		@include ellipsis;
+	}
 	.card-player {
 		max-width: px-to-rem(327px);
 		border: 1px solid #dcdcdc;

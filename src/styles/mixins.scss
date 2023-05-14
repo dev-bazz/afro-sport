@@ -38,6 +38,14 @@
 	}
 }
 
+// Line Clamp
+@mixin ellipsis($line: 1) {
+	display: -webkit-box;
+	-webkit-line-clamp: $line;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+
 // Media Queries Mixins
 
 @mixin custom-media-query($device-type, $width) {
@@ -53,8 +61,6 @@
 		@warn 'Invalid argument for custom-media-query mixin. Please use mobile or desktop.';
 	}
 }
-
-
 
 // Animation Mixins
 

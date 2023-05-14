@@ -1,16 +1,5 @@
 <script setup>
 	import { onMounted } from "vue";
-
-	const getPlayers = async () => {
-		const response = await fetch("/api/test");
-		const data = JSON.parse(response._bodyInit);
-		console.log(data);
-	};
-
-	onMounted(() => {
-		console.log("Mounted");
-		getPlayers();
-	});
 </script>
 
 <template>

@@ -6,8 +6,20 @@
 	import Player from "./PlayerInfoCard.vue";
 	import { reactive } from "vue";
 	import { register } from "swiper/element/bundle";
+	import { onMounted, ref } from "vue";
 
+	const players = ref([]);
+	const getPlayers = async () => {
+		const response = await fetch("/api/test");
+		const data = JSON.parse(response._bodyInit);
+		players.value = data?.players || data;
+		console.log(data);
+	};
 	register();
+	onMounted(() => {
+		console.log("Mounted");
+		getPlayers();
+	});
 
 	const sliderConfig = reactive({
 		slidesPerView: 3.8,
@@ -64,7 +76,7 @@
 						slidesPerView: 1.1,
 					},
 				}">
-				<template v-for="n in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]">
+				<template v-for="player in players">
 					<swiper-slide> <Player :price="100" /> </swiper-slide>
 				</template>
 			</swiper-container>
@@ -128,10 +140,15 @@
 				</template>
 			</div>
 			<div className="grid">
-				<template
-					v-for="n in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]">
-					<Player :price="100" />
-				</template>
+				<Player
+					v-for="player in players"
+					:price="player?.price.value.trim()"
+					:type="player?.price.type"
+					:image="player?.imageSrc"
+					:fName="player?.firstName"
+					:lName="player?.lastName"
+					:position="player?.position"
+					:club="player?.currentClub" />
 			</div>
 		</div>
 	</div>
@@ -170,7 +187,7 @@
 		.grid {
 			display: grid;
 			grid-template-columns: repeat(4, auto);
-			gap: px-to-rem(16px);
+			gap: px-to-rem(8px);
 			@include containerL;
 			margin-top: px-to-rem(24px);
 			padding-bottom: px-to-rem(32px);
@@ -237,6 +254,7 @@
 
 	.layout {
 		@include containerL;
+		max-width: none;
 		padding: 0;
 	}
 </style>

@@ -9,7 +9,7 @@ export default [
 		strongFoot: "Left",
 		price: {
 			type: "Exact",
-			value: "$150 million",
+			value: "$150  ",
 		},
 		email: "m.sal@liverpoolfc.com",
 		currentClub: "Liverpool FC",
@@ -31,7 +31,7 @@ export default [
 		strongFoot: "Left",
 		price: {
 			type: "Exact",
-			value: "$150 million",
+			value: "$150  ",
 		},
 		email: "s.mane@liverpoolfc.com",
 		currentClub: "Liverpool FC",
@@ -53,7 +53,7 @@ export default [
 		strongFoot: "Left",
 		price: {
 			type: "Exact",
-			value: "$50 million",
+			value: "$50  ",
 		},
 		email: "riyad.mahrez@mancity.com",
 		currentClub: "Manchester City FC",
@@ -75,7 +75,7 @@ export default [
 		strongFoot: "Right",
 		price: {
 			type: "Exact",
-			value: "$20 million",
+			value: "$20  ",
 		},
 		email: "s.aurier@spurs.com",
 		currentClub: "Tottenham Hotspur FC",
@@ -85,7 +85,7 @@ export default [
 		hometown: "Ouégnin, Ivory Coast",
 		gender: "Male",
 		language: "French, English",
-		imageSrc: "/src/assets/player1.webp",
+		imageSrc: "/src/assets/player4.webp",
 	},
 	{
 		firstName: "Cristiano",
@@ -97,7 +97,7 @@ export default [
 		strongFoot: "Right",
 		price: {
 			type: "Exact",
-			value: "$100 million",
+			value: "$100  ",
 		},
 		email: "c.ronaldo@juventus.com",
 		currentClub: "Juventus FC",
@@ -107,7 +107,7 @@ export default [
 		hometown: "Funchal, Portugal",
 		gender: "Male",
 		language: "Portuguese, English, Spanish",
-		imageSrc: "/src/assets/player1.webp",
+		imageSrc: "/src/assets/player5.webp",
 	},
 	{
 		firstName: "Lionel",
@@ -119,7 +119,7 @@ export default [
 		strongFoot: "Left",
 		price: {
 			type: "Exact",
-			value: "$150 million",
+			value: "$150  ",
 		},
 		email: "l.messi@psg.com",
 		currentClub: "Paris Saint-Germain FC",
@@ -129,7 +129,7 @@ export default [
 		hometown: "Rosario, Argentina",
 		gender: "Male",
 		language: "Spanish, Catalan, English",
-		imageSrc: "/src/assets/player1.webp",
+		imageSrc: "/src/assets/player6.webp",
 	},
 	{
 		firstName: "Emma",
@@ -141,7 +141,7 @@ export default [
 		strongFoot: "Left",
 		price: {
 			type: "Exact",
-			value: "$10 million",
+			value: "$10  ",
 		},
 		email: "emma.johnson@gmail.com",
 		currentClub: "FC Barcelona",
@@ -151,7 +151,7 @@ export default [
 		hometown: "Madrid, Spain",
 		gender: "Female",
 		language: "Spanish, English",
-		imageSrc: "/src/assets/player1.webp",
+		imageSrc: "/src/assets/player7.webp",
 	},
 	{
 		firstName: "James",
@@ -163,7 +163,7 @@ export default [
 		strongFoot: "Right",
 		price: {
 			type: "Negotiable",
-			value: "$8 million",
+			value: "$8  ",
 		},
 		email: "james.roberts@gmail.com",
 		currentClub: "AC Milan",
@@ -173,7 +173,7 @@ export default [
 		hometown: "Manchester, United Kingdom",
 		gender: "Male",
 		language: "English, Italian",
-		imageSrc: "/src/assets/player1.webp",
+		imageSrc: "/src/assets/player8.webp",
 	},
 	{
 		firstName: "Maria",
@@ -185,7 +185,7 @@ export default [
 		strongFoot: "Right",
 		price: {
 			type: "Exact",
-			value: "$15 million",
+			value: "$15  ",
 		},
 		email: "maria.garcia@gmail.com",
 		currentClub: "Real Madrid",
@@ -207,7 +207,7 @@ export default [
 		strongFoot: "Right",
 		price: {
 			type: "Exact",
-			value: "$20 million",
+			value: "$20  ",
 		},
 		email: "s.aurier@spurs.com",
 		currentClub: "Tottenham Hotspur FC",
@@ -217,7 +217,7 @@ export default [
 		hometown: "Ouégnin, Ivory Coast",
 		gender: "Male",
 		language: "French, English",
-		imageSrc: "/src/assets/player1.webp",
+		imageSrc: "/src/assets/player2.webp",
 	},
 	{
 		firstName: "Neymar",
@@ -229,7 +229,7 @@ export default [
 		strongFoot: "Right",
 		price: {
 			type: "Exact",
-			value: "$180 million",
+			value: "$180  ",
 		},
 		email: "neymar@psg.com",
 		currentClub: "Paris Saint-Germain FC",
@@ -239,7 +239,7 @@ export default [
 		hometown: "Mogi das Cruzes, Brazil",
 		gender: "Male",
 		language: "Portuguese, Spanish, English",
-		imageSrc: "/src/assets/player1.webp",
+		imageSrc: "/src/assets/player3.webp",
 	},
 	{
 		firstName: "Erling",
@@ -251,7 +251,7 @@ export default [
 		strongFoot: "Right",
 		price: {
 			type: "Exact",
-			value: "$150 million",
+			value: "$150  ",
 		},
 		email: "e.haaland@bvb.de",
 		currentClub: "Borussia Dortmund",
@@ -261,6 +261,6 @@ export default [
 		hometown: "Bryne, Norway",
 		gender: "Male",
 		language: "Norwegian, English, German",
-		imageSrc: "/src/assets/player1.webp",
+		imageSrc: "/src/assets/player4.webp",
 	},
 ];
