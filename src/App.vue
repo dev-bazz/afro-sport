@@ -1,7 +1,4 @@
 <script setup>
-	import Navbar from "./components/NavBar/NavBar.vue";
-	import Footer from "./components/Footer/Footer.vue";
-	import HomeVue from "./pages/Home/Home.vue";
 	import { onMounted } from "vue";
 
 	const getPlayers = async () => {
