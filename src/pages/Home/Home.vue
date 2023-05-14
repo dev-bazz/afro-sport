@@ -77,7 +77,16 @@
 					},
 				}">
 				<template v-for="player in players">
-					<swiper-slide> <Player :price="100" /> </swiper-slide>
+					<swiper-slide>
+						<Player
+							:price="player?.price.value.trim()"
+							:type="player?.price.type"
+							:image="player?.imageSrc"
+							:fName="player?.firstName"
+							:lName="player?.lastName"
+							:position="player?.position"
+							:club="player?.currentClub" />
+					</swiper-slide>
 				</template>
 			</swiper-container>
 		</div>
