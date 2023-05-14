@@ -1,4 +1,5 @@
 import { createServer, Model } from "miragejs";
+import players from "./playerData";
 
 export default function ({ environment = "development" } = {}) {
 	const server = createServer({
@@ -8,11 +9,14 @@ export default function ({ environment = "development" } = {}) {
 			player: Model,
 		},
 		seeds(server) {
-			server.create("player", {
-				firstName: "Clement",
-				lastName: "Bazuaye",
-				position: ["striker", "defenders"],
+			players.forEach((player) => {
+				server.create("player", player);
 			});
+			// server.create("player", {
+			// 	firstName: "Clement",
+			// 	lastName: "Bazuaye",
+			// 	position: ["striker", "defenders"],
+			// });
 		},
 
 		routes() {
