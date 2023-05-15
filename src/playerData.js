@@ -1,3 +1,12 @@
+import image1 from "./assets/player1.webp";
+import image2 from "./assets/player2.webp";
+import image3 from "./assets/player3.webp";
+import image4 from "./assets/player4.webp";
+import image5 from "./assets/player5.webp";
+import image6 from "./assets/player6.webp";
+import image7 from "./assets/player7.webp";
+import image8 from "./assets/player8.webp";
+
 export default [
 	{
 		firstName: "Mohamed",
@@ -19,7 +28,7 @@ export default [
 		hometown: "Nagrig, Egypt",
 		gender: "Male",
 		language: "Arabic, English",
-		imageSrc: "/src/assets/player1.webp",
+		imageSrc: image1,
 	},
 	{
 		firstName: "Sadio",
@@ -41,7 +50,7 @@ export default [
 		hometown: "Bambali, Senegal",
 		gender: "Male",
 		language: "Wolof, French, English",
-		imageSrc: "/src/assets/player2.webp",
+		imageSrc: image2,
 	},
 	{
 		firstName: "Riyad",
@@ -63,7 +72,7 @@ export default [
 		hometown: "Sarcelles, France",
 		gender: "Male",
 		language: "Arabic, French, English",
-		imageSrc: "/src/assets/player3.webp",
+		imageSrc: image3,
 	},
 	{
 		firstName: "Serge",
@@ -85,7 +94,7 @@ export default [
 		hometown: "Ouégnin, Ivory Coast",
 		gender: "Male",
 		language: "French, English",
-		imageSrc: "/src/assets/player4.webp",
+		imageSrc: image4,
 	},
 	{
 		firstName: "Cristiano",
@@ -107,7 +116,7 @@ export default [
 		hometown: "Funchal, Portugal",
 		gender: "Male",
 		language: "Portuguese, English, Spanish",
-		imageSrc: "/src/assets/player5.webp",
+		imageSrc: image5,
 	},
 	{
 		firstName: "Lionel",
@@ -129,7 +138,7 @@ export default [
 		hometown: "Rosario, Argentina",
 		gender: "Male",
 		language: "Spanish, Catalan, English",
-		imageSrc: "/src/assets/player6.webp",
+		imageSrc: image6,
 	},
 	{
 		firstName: "Emma",
@@ -151,7 +160,7 @@ export default [
 		hometown: "Madrid, Spain",
 		gender: "Female",
 		language: "Spanish, English",
-		imageSrc: "/src/assets/player7.webp",
+		imageSrc: image7,
 	},
 	{
 		firstName: "James",
@@ -173,7 +182,7 @@ export default [
 		hometown: "Manchester, United Kingdom",
 		gender: "Male",
 		language: "English, Italian",
-		imageSrc: "/src/assets/player8.webp",
+		imageSrc: image8,
 	},
 	{
 		firstName: "Maria",
@@ -195,7 +204,7 @@ export default [
 		hometown: "Barcelona, Spain",
 		gender: "Female",
 		language: "Spanish, Catalan, English",
-		imageSrc: "/src/assets/player1.webp",
+		imageSrc: image1,
 	},
 	{
 		firstName: "Serge",
@@ -217,7 +226,7 @@ export default [
 		hometown: "Ouégnin, Ivory Coast",
 		gender: "Male",
 		language: "French, English",
-		imageSrc: "/src/assets/player2.webp",
+		imageSrc: image2,
 	},
 	{
 		firstName: "Neymar",
@@ -239,7 +248,7 @@ export default [
 		hometown: "Mogi das Cruzes, Brazil",
 		gender: "Male",
 		language: "Portuguese, Spanish, English",
-		imageSrc: "/src/assets/player3.webp",
+		imageSrc: image3,
 	},
 	{
 		firstName: "Erling",
@@ -261,6 +270,6 @@ export default [
 		hometown: "Bryne, Norway",
 		gender: "Male",
 		language: "Norwegian, English, German",
-		imageSrc: "/src/assets/player4.webp",
+		imageSrc: image4,
 	},
 ];
