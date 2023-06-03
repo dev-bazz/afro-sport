@@ -69,6 +69,9 @@
 					835: {
 						slidesPerView: 3,
 					},
+					600: {
+						slidesPerView: 2.1,
+					},
 					375: {
 						slidesPerView: 1.2,
 					},
@@ -110,6 +113,9 @@
 					835: {
 						slidesPerView: 3,
 					},
+					600: {
+						slidesPerView: 2.1,
+					},
 
 					535: {
 						slidesPerView: 2,
@@ -140,22 +146,24 @@
 			<Tab
 				title="Explore"
 				link="See all" />
-			<div className="flitters">
-				<template
-					v-for="n in [
-						'Goalkeeper',
-						'Center backs(Defenders)',
-						'Fullbacks(Defenders)',
-						'Central midfielders',
-						'Attacking midfielders',
-						'Defensive midfielders ',
-						'Wingers',
-						'Striker',
-					]">
-					<div className="filter">
-						{{ n }}
-					</div>
-				</template>
+			<div class="white-space">
+				<ul className="flitters">
+					<template
+						v-for="n in [
+							'Goalkeeper',
+							'Center backs(Defenders)',
+							'Fullbacks(Defenders)',
+							'Central midfielders',
+							'Attacking midfielders',
+							'Defensive midfielders ',
+							'Wingers',
+							'Striker',
+						]">
+						<li className="filter">
+							{{ n }}
+						</li>
+					</template>
+				</ul>
 			</div>
 			<div className="grid">
 				<Player
@@ -183,13 +191,13 @@
 		@include containerL;
 
 		@include custom-media-query("desktop", 320px) {
-			max-width: calc(320px - 16px);
+			max-width: calc(100dvw - 16px);
 		}
 		@include custom-media-query("desktop", 375px) {
-			max-width: calc(382px - 16px);
+			max-width: calc(100dvw - 16px);
 		}
 		@include custom-media-query("desktop", 535px) {
-			max-width: calc(535px - 16px);
+			max-width: calc(100dvw - 16px);
 		}
 		@include custom-media-query("desktop", 835px) {
 			max-width: calc(835px - 16px);
@@ -199,6 +207,12 @@
 		}
 
 		margin-top: 24px;
+	}
+
+	.white-space {
+		white-space: nowrap;
+		overflow-x: auto;
+		max-width: 100dvw;
 	}
 	.players {
 		margin-top: px-to-rem(40px);
@@ -240,7 +254,7 @@
 		display: flex;
 		justify-content: space-between;
 		margin-top: px-to-rem(24px);
-		flex-wrap: wrap;
+
 		gap: px-to-rem(14px);
 
 		.filter {
